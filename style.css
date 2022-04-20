@@ -1,0 +1,280 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto&display=swap');
+
+:root {
+    --background: #eae8fe;
+    --button: #6327fe;
+    --gray1: #333;
+    --gray2: #bdbdbd;
+
+}
+
+*,
+button {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: inherit;
+}
+
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+header img {
+    display: block;
+    width: 386px;
+    margin: 0 auto 24px auto;
+}
+
+main {
+    margin: 43px auto 171px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 360px;
+}
+
+.container.left {
+    margin-right: 28px;
+    float: left;
+    background-color: #fff;
+}
+
+.container.right {
+    float: right;
+}
+
+.container.left .cokeList {
+    margin: 19px 27px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.container.left .cokeList .coke {
+    width: 94px;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border-style: hidden;
+    font-size: .563em;
+    font-weight: 500;
+    line-height: 1.16em;
+    position: relative;
+}
+
+.container.left .cokeList .coke:hover {
+    outline: 3px solid var(--button);
+    cursor: pointer;
+}
+
+.container.left .cokeList .coke.sold_out::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94px;
+    height: 130px;
+    z-index: 10;
+    border-radius: 10px;
+    background: no-repeat center/ 60px 46px url("./images/Sold-out.png") rgba(0, 0, 0, 0.5);
+}
+
+
+.container.left .cokeList .coke.sold_out {
+    pointer-events: none;
+}
+
+
+
+.container.left .cokeList .coke img {
+    width: 36px;
+    margin-top: 11px;
+}
+
+.container.left .cokeList .coke span {
+    display: block;
+}
+
+.container.left .cokeList .coke .name {
+    margin: 6px 0 7px 0;
+}
+
+.container.left .cokeList .coke .price {
+    background-color: var(--button);
+    border-radius: 50px;
+    padding: 5px 16px 5px 15px;
+    margin: 0 11px 9px 13px;
+    color: #fff;
+}
+
+.selectedList img,
+.cartContainer .cartList img {
+    width: 18px;
+    padding-left: 2px;
+}
+
+.container.left .confirmPayment {
+    margin: 0 27px 28px;
+    padding-top: 1px;
+}
+
+.price_btn {
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875em;
+    line-height: 1.25em;
+    background-color: var(--background);
+}
+
+.payment_btn {
+    font-size: 0.813em;
+    line-height: 1.188em;
+    background-color: #fff;
+    border-style: none;
+}
+
+.btn {
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.container.left .confirmPayment .change_box {
+    width: 200px;
+    float: left;
+    margin-bottom: 12px;
+}
+
+.container.left .confirmPayment .pay {
+    float: right;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.container.left .confirmPayment .pay.return {
+    padding: 6px 9px 7px 10px;
+}
+
+.container.left .confirmPayment input[type="text"] {
+    padding: 6px 11px 7px 6px;
+    color: var(--gray2);
+    border: 1px solid var(--gray2);
+    margin-bottom: 12px;
+}
+
+.container.left .confirmPayment .pay.payment {
+    padding: 6px 35px 7px;
+}
+
+.selectedList {
+    padding: 12px;
+    border: 1px solid var(--gray2);
+    background-color: var(--background);
+    border-radius: 5px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.container.left .confirmPayment .selectedList {
+    width: 200px;
+    height: 106px;
+    float: left;
+}
+
+.selectedList::-webkit-scrollbar {
+    width: 4px;
+}
+
+.selectedList::-webkit-scrollbar-thumb {
+    height: 79px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.selectedList li {
+    display: inline-block;
+    padding: 6px 8px 7px;
+    background-color: #fff;
+    font-size: 0.563em;
+    border-radius: 5px;
+}
+
+.selectedList li+li {
+    margin-top: 6px;
+}
+
+.selectedList li img,
+.selectedList li span {
+    float: left;
+}
+
+.selectedList li span {
+    margin-left: 10px;
+    line-height: 3.667em;
+}
+
+.selectedList li .count {  
+    display: flex;
+    float: right; 
+    padding: 4px 11px 6px;
+    border: 1px solid var(--gray2);
+    border-radius: 5px;
+    font-size: 1.556em;
+    line-height: 1.538em;
+}
+
+.container.left .confirmPayment .get {
+    display: flex;
+    float: right;
+    padding: 45px 35px;
+    margin-bottom: 28px;
+    font-size: 0.813em;
+    font-weight: 700;
+    line-height: 1.188em;
+    background-color: var(--button);
+    color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container.right .price_box {
+    padding: 9px 27px;
+    background-color: #fff;
+}
+
+.container.right .cartContainer {
+    margin-top: 20px;
+    padding: 25px 0 52px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.container.right .cartContainer .selectedList {
+    width: 306px;
+    height: 364px;
+    margin: 13px 27px 6px;
+}
+
+.container.right .cartContainer .total_price {
+    font-size: 0.750em;
+    margin-right: 27px;
+    float: right;
+}
