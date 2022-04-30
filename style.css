@@ -278,3 +278,41 @@ main {
     margin-right: 27px;
     float: right;
 }
+
+@media screen and (max-width: 360px) {
+    body {
+        background-color: white;
+    }
+
+    header img {
+        width: 166px;
+        margin: 0 auto;
+    }
+
+    main {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .container.left {
+        margin-right: 0;
+    }
+
+    .container.left .confirmPayment {
+        margin-bottom: 0;
+    }
+
+    .container.left .confirmPayment .get {
+        margin-bottom: 20px;
+    }
+
+    .container.right .price_box {
+        margin: 0 27px;
+        padding: 0;
+    }
+
+    .container.right .cartContainer {
+        margin: 41px 0 43px 0;
+        padding: 0;
+    }
+}
