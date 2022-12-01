@@ -1,6 +1,9 @@
 # 🥤 Vending_Machine
+
 ## Overview
-HTML/CSS를 활용한 벤딩머신 만들기
+HTML/CSS를 활용한 벤딩머신 만들기</br>
+https://soheeyeo.github.io/Vending_Machine/
+
 
 ## Features
 - 미디어 쿼리를 이용하여 모바일 화면(360px)에 맞는 반응형 웹 구현
